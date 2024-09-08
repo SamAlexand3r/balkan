@@ -1,52 +1,45 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; 
+}
+
 .App {
+  position: relative;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 100vh; 
-  margin: 0;
-  overflow: hidden;
-  position: relative;
+  align-items: center;
 }
 
 .background-video {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;  
+  height: 100vh; 
   object-fit: cover; 
   z-index: -1;
 }
+
+@media (max-width: 600px) {
+  .background-video {
+    width: 100vw; 
+    height: 100vh; 
+    object-fit: cover; 
+  }
+}
+
 .content {
   position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px; 
-  width: 100%;
-  box-sizing: border-box; 
-}
-
-
-
-@media (max-width: 600px) {
-  .App {
-    height: auto; 
-    padding: 0; 
-  }
-
-  @media (max-width: 600px) {
-    .background-video {
-      width: 100vw; 
-      height: 100vh; 
-      object-fit: cover; 
-    }
-  }
-  .content {
-    margin-top: 10px; 
-    padding: 0 10px; 
-  }
 }
