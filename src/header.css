@@ -18,4 +18,14 @@
     width: 400px;
     cursor: pointer;
   }
+  @media (max-width: 600px) {
+    .logo-container {
+      padding: 15px;
+      border: 2px solid #0073ff;
+    }
+  
+    .balkan-logo {
+      width: 200px;
+    }
+  }
   

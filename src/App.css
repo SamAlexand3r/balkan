@@ -1,12 +1,12 @@
 .App {
-  text-align: center;
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 100vh; /* Высота для больших экранов */
+  margin: 0;
+  overflow: hidden;
+  position: relative;
 }
 
 .background-video {
@@ -24,14 +24,27 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  text-align: center;
+  padding: 20px; /* Отступы для контента */
+  width: 100%;
+  box-sizing: border-box; /* Включаем отступы и границы в ширину элемента */
 }
 
-.news-box {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-  margin-top: 10px;
-  display: inline-block;
-  border-radius: 10px;
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 600px) {
+  .App {
+    height: auto; /* Убираем фиксированную высоту */
+    padding: 0; /* Убираем отступы */
+  }
+
+  .background-video {
+    height: 50vh; /* Уменьшаем высоту видео на мобильных устройствах */
+  }
+
+  .content {
+    margin-top: 10px; /* Отступ сверху для контента */
+    padding: 0 10px; /* Отступы для контента на мобильных устройствах */
+  }
 }

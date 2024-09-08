@@ -10,10 +10,11 @@
   .logo-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px; 
+    gap: 40px;
     width: 80%;
-    max-width: 1200px; 
-    justify-content: center; 
+    max-width: 1200px;
+    justify-content: center;
+    box-sizing: border-box; /* Включаем отступы и границы в ширину элемента */
   }
   
   .country-box {
@@ -25,15 +26,52 @@
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
+    transition: transform 0.3s, background-color 0.3s;
+    position: relative; /* Для позиционирования псевдоэлемента */
+    overflow: hidden; /* Чтобы текст не выходил за пределы кнопки */
   }
   
-  .country-box:hover {
+  .country-box:not(.no-hover):hover {
     transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.5); /* Затемняем фон при наведении */
   }
   
+  .country-box:not(.no-hover)::after {
+    content: "Coming Soon";
+    position: absolute;
+    bottom: 10px; /* Располагаем текст внизу блока с небольшим отступом */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    opacity: 0; /* Скрываем текст по умолчанию */
+    transition: opacity 0.3s; /* Плавное появление текста */
+  }
+  
+  .country-box:not(.no-hover):hover::after {
+    opacity: 1; /* Показываем текст при наведении */
+  }
   .country-logo {
     width: 200px;
     cursor: pointer;
   }
+  @media (max-width: 600px) {
+    .logo-grid {
+      grid-template-columns: repeat(2, 1fr); /* Уменьшаем количество колонок */
+      gap: 20px;
+      width: 100%; /* Убираем фиксированную ширину */
+    }
   
+    .country-box {
+      padding: 15px;
+      border: 2px solid #ff5600;
+      width: 100%; /* Устанавливаем ширину 100% для кнопок */
+      box-sizing: border-box; /* Включаем отступы и границы в ширину элемента */
+    }
+  
+    .country-logo {
+      width: 100%; /* Ширина логотипа на мобильных устройствах */
+      max-width: 150px; /* Максимальная ширина логотипа */
+    }
+  }
