@@ -11,7 +11,7 @@ const Main = () => {
   return (
     <div className="main">
       <div className="logo-grid">
-        <a href="https://monte-i.com" target="_blank" rel="noopener noreferrer" className="country-box no-hover">
+        <a href="http://95.165.24.199/" target="_blank" rel="noopener noreferrer" className="country-box no-hover">
           <img src={monteLogo} alt="Monte-i" className="country-logo" />
         </a>
         <div className="country-box">
