@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Высота для больших экранов */
+  height: 100vh; 
   margin: 0;
   overflow: hidden;
   position: relative;
@@ -26,25 +26,28 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 20px; /* Отступы для контента */
+  padding: 20px; 
   width: 100%;
-  box-sizing: border-box; /* Включаем отступы и границы в ширину элемента */
+  box-sizing: border-box; 
 }
 
 
-/* Медиа-запрос для мобильных устройств */
+
 @media (max-width: 600px) {
   .App {
-    height: auto; /* Убираем фиксированную высоту */
-    padding: 0; /* Убираем отступы */
+    height: auto; 
+    padding: 0; 
   }
 
-  .background-video {
-    height: 50vh; /* Уменьшаем высоту видео на мобильных устройствах */
+  @media (max-width: 600px) {
+    .background-video {
+      width: 100vw; 
+      height: 100vh; 
+      object-fit: cover; 
+    }
   }
-
   .content {
-    margin-top: 10px; /* Отступ сверху для контента */
-    padding: 0 10px; /* Отступы для контента на мобильных устройствах */
+    margin-top: 10px; 
+    padding: 0 10px; 
   }
 }

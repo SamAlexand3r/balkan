@@ -3,7 +3,7 @@ import './App.css';
 import Header from './header';
 import Main from './main';
 import backgroundVideo from './assets/background.webm'; 
-import backgroundVideoMP4 from './assets/background.mp4'; // Добавьте альтернативный формат видео
+import backgroundVideoMP4 from './assets/background.mp4'; 
 
 
 function App() {
