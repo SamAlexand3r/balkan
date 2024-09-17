@@ -1,0 +1,38 @@
+/* Footer.css */
+.footer {
+    position: fixed; /* Фиксированное положение */
+    bottom: 0; /* Привязка к нижней части */
+    left: 0; /* Привязка к левой стороне */
+    width: 100%; /* Ширина на весь экран */
+    background: rgba(255, 255, 255, 0.5); /* Полупрозрачный фон */
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between; /* Размещает элементы по краям */
+    align-items: center;
+    box-sizing: border-box; /* Чтобы padding не увеличивал ширину */
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Для центрирования текста */
+  }
+  
+  .footer p {
+    margin: 0;
+    color: #000;
+    font-size: 16px;
+  }
+  
+  .footer-logo {
+    width: 100px; /* Ширина логотипа */
+    height: auto;
+    margin-top: 10px;
+    position: absolute; /* Абсолютное позиционирование */
+    right: 20px; /* Отступ справа */
+    bottom: 10px; /* Отступ снизу */
+  }
+  

@@ -6,7 +6,7 @@ import croatLogo from './assets/hrvat.png';
 import bosniaLogo from './assets/Bosna.png';
 import slovenLogo from './assets/sloven.png';
 import macedLogo from './assets/Mkd.png';
-
+import Footer from './Footer';
 const Main = () => {
   return (
     <div className="main">
@@ -30,6 +30,7 @@ const Main = () => {
           <img src={macedLogo} alt="Mkd-i" className="country-logo" />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
